@@ -1,0 +1,18 @@
+<div>
+  <h2>Ejemplo Animacion 1: Cambio de estado en la Etiqueta "p" al hacer click en un boton</h2>
+  <p>Un ejemplo simple de animacion entre dos estados con la etiqueta "p": Activo e Inactivo.</p>
+  <p>"Activo" muestra una cadena de caracteres con una luz en el fondo</p>
+  <p>"Inactivo" muestra grisaseo y pequeño la etiqueta "p"</p>
+
+  <!--
+    Debug rapido para ver que pasa cuando se hace click en el boton
+  -->
+  <pre>
+    Estado Actual: {{ pStatus | json }}
+  </pre>
+
+  <button (click)="toggleP()">Cambiar Estado de "p"</button>
+
+  <p [@pState]="pStatus">Lorem ipsum dorem</p>
+  
+</div>

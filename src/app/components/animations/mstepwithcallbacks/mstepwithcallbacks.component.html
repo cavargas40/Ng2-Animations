@@ -1,0 +1,17 @@
+<div>
+  <h2>Ejemplo 2: Multiples pasos con Callbacks</h2>
+
+  <button (click)="start()" [disabled]="!canRun">Iniciar</button>
+  <button (click)="reset()" [disabled]="!canReset">Reiniciar</button>
+
+  <div id="container">
+    <ul>
+      <li *ngFor="let item of list" (@flyInOut.start)="animationStarted($event, item)" (@flyInOut.done)="animationStarted($event, item)"
+        [@flyInOut]="'in'">
+
+        {{item}}
+      </li>
+    </ul>
+  </div>
+
+</div>

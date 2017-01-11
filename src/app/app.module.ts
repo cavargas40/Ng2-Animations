@@ -5,14 +5,27 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+//router
+import { AppRoutingModule } from './util/app-routing.module';
+
+//components
+import { PtagtransitionsComponent } from './components/animations/ptagtransitions/ptagtransitions.component';
+import { MstepwithcallbacksComponent } from './components/animations/mstepwithcallbacks/mstepwithcallbacks.component';
+
+
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PtagtransitionsComponent,
+    MstepwithcallbacksComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
